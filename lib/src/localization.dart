@@ -97,6 +97,8 @@ class TimetableLocalizationsDelegate
         return const TimetableLocalizationJa();
       case 'pt':
         return const TimetableLocalizationPt();
+      case 'lv':
+        return const TimetableLocalizationLv();
       case 'ru':
         return const TimetableLocalizationRu();
       case 'zh':
@@ -356,3 +358,21 @@ class TimetableLocalizationRu extends TimetableLocalizations {
       'Неделя ${week.weekOfYear}, ${week.weekBasedYear}';
 }
 
+
+class TimetableLocalizationLv extends TimetableLocalizations {
+  const TimetableLocalizationLv();
+
+  @override
+  List<String> weekLabels(Week week) {
+    return [
+      weekOfYear(week),
+      'Неделя ${week.weekOfYear}',
+      'S ${week.weekOfYear}',
+      '${week.weekOfYear}',
+    ];
+  }
+
+  @override
+  String weekOfYear(Week week) =>
+      'Неделя ${week.weekOfYear}, ${week.weekBasedYear}';
+}
