@@ -366,7 +366,7 @@ class TimetableLocalizationLv extends TimetableLocalizations {
   List<String> weekLabels(Week week) {
     return [
       weekOfYear(week),
-      'Неделя ${week.weekOfYear}',
+      'Nedēļa ${week.weekOfYear}',
       'S ${week.weekOfYear}',
       '${week.weekOfYear}',
     ];
@@ -374,5 +374,5 @@ class TimetableLocalizationLv extends TimetableLocalizations {
 
   @override
   String weekOfYear(Week week) =>
-      'Неделя ${week.weekOfYear}, ${week.weekBasedYear}';
+      'Nedēļa ${week.weekOfYear}, ${week.weekBasedYear}';
 }
